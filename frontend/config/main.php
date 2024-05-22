@@ -11,12 +11,6 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
-       'user' => [
-        'identityClass' => 'common\models\User',
-        'enableAutoLogin' => true,
-        ],
-    ],
     'modules' => [
         'admin' => [
             'class' => 'mdm\admin\Module',

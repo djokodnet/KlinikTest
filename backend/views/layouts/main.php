@@ -28,7 +28,8 @@ AppAsset::register($this);
 <header>
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        //'brandLabel' => Yii::$app->name,
+        'brandLabel' => 'Klinik Medika',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
@@ -36,6 +37,13 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Dokter', 'url' => ['/doctor/index']],
+        ['label' => 'Obat', 'url' => ['/medicine/index']],
+        ['label' => 'Pendaftaran Pasien', 'url' => ['/patient/index']],
+        ['label' => 'Tindakan', 'url' => ['/treatment/index']],
+        ['label' => 'Resep', 'url' => ['/prescription/index']],
+        ['label' => 'Transaksi', 'url' => ['/transaction/index']],
+        ['label' => 'Pembayaran', 'url' => ['/payment/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
